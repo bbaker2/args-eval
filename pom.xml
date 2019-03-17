@@ -6,8 +6,9 @@
   <artifactId>arg-eval</artifactId>
   <version>0.0.1</version>
   <name>Argument Evaluator</name>
-  <description>For helping read string arguments, specfically RPG systems</description>
+  <description>For helping read string arguments, specifically RPG systems</description>
 
+  <packaging>jar</packaging>
 
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
