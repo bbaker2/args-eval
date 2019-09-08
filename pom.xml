@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>bbaker.util.arguments</groupId>
   <artifactId>arg-eval</artifactId>
-  <version>0.0.1</version>
+  <version>1.0.0</version>
   <name>Argument Evaluator</name>
   <description>For helping read string arguments, specifically RPG systems</description>
 
@@ -16,8 +16,6 @@
   </properties>
 
   <build>
-    <!-- <sourceDirectory>${basedir}/src/main/java</sourceDirectory> <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory> -->
-    <!-- <outputDirectory>${basedir}/target/classes</outputDirectory> <testOutputDirectory>${basedir}/target/test-classes</testOutputDirectory> -->
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -31,47 +29,45 @@
     </plugins>
   </build>
 
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
 
   <dependencyManagement>
+
     <dependencies>
+
       <dependency>
-        <groupId>org.jdbi</groupId>
-        <artifactId>jdbi3-bom</artifactId>
-        <type>pom</type>
-        <version>3.0.1</version>
-        <scope>import</scope>
+        <groupId>com.github.User</groupId>
+        <artifactId>Repo</artifactId>
+        <version>Tag</version>
       </dependency>
+
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.1.0</version>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.1.0</version>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>2.21.0</version>
+        <scope>test</scope>
+      </dependency>
+
     </dependencies>
+
   </dependencyManagement>
-
-  <dependencies>
-
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>5.1.0</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.1.0</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>2.21.0</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-        <groupId>org.apache.logging.log4j</groupId>
-        <artifactId>log4j-core</artifactId>
-        <version>2.11.0</version>
-    </dependency>
-
-  </dependencies>
 </project>
